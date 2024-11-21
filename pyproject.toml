@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "kick-dl"
+version = "0.1.0"
+description = "A Python package for fetching and downloading VoDs from Kick channels. Includes support for selecting specific VoDs, listing available streams, and downloading in custom quality with optional concurrency."
+authors = ["Alyetama <malyetama@pm.me>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+cloudscraper = "^1.2.71"
+yt_dlp = "^2024.5.27"
+
+# [tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+kick-dl = 'kick_dl:kick_dl.main'
